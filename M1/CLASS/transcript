@@ -1,0 +1,110 @@
+# //  Questa Sim-64
+# //  Version 2024.2 linux_x86_64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+do run.do
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:47:58 on Jan 31,2025
+# vlog -reportprogress 300 -lint async_fifo.sv "+acc" 
+# -- Compiling module async_fifo
+# -- Compiling module fifomem
+# -- Compiling module sync_r2w
+# -- Compiling module sync_w2r
+# -- Compiling module r_ptr_empty
+# -- Compiling module w_ptr_full
+# 
+# Top level modules:
+# 	async_fifo
+# End time: 22:47:58 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:48:01 on Jan 31,2025
+# vlog -reportprogress 300 -lint async_fifo_tb.sv "+acc" 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 22:48:01 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.top 
+# Start time: 22:48:02 on Jan 31,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.top(fast)
+# Loading work.async_fifo(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.fifomem(fast)
+# Loading work.r_ptr_empty(fast)
+# Loading work.w_ptr_full(fast)
+# Time=15, w_full=0, r_empty=1, w_inc=x, w_data=xx, r_inc=x, r_data=xx
+# Time=25, w_full=0, r_empty=1, w_inc=x, w_data=xx, r_inc=x, r_data=xx
+# Time=45, w_full=0, r_empty=1, w_inc=x, w_data=xx, r_inc=x, r_data=xx
+# Time=75, w_full=0, r_empty=1, w_inc=x, w_data=xx, r_inc=x, r_data=xx
+# Time=105, w_full=0, r_empty=1, w_inc=1, w_data=ff, r_inc=x, r_data=xx
+# Time=125, w_full=0, r_empty=1, w_inc=0, w_data=ff, r_inc=x, r_data=xx
+# Time=135, w_full=0, r_empty=1, w_inc=0, w_data=ff, r_inc=x, r_data=xx
+# Time=165, w_full=0, r_empty=1, w_inc=0, w_data=24, r_inc=x, r_data=xx
+# Time=175, w_full=0, r_empty=1, w_inc=0, w_data=24, r_inc=x, r_data=xx
+# Time=195, w_full=0, r_empty=1, w_inc=1, w_data=81, r_inc=x, r_data=xx
+# Time=225, w_full=0, r_empty=1, w_inc=1, w_data=09, r_inc=x, r_data=xx
+# Time=255, w_full=0, r_empty=1, w_inc=0, w_data=09, r_inc=x, r_data=09
+# Time=275, w_full=0, r_empty=1, w_inc=1, w_data=63, r_inc=x, r_data=09
+# Time=285, w_full=0, r_empty=1, w_inc=0, w_data=63, r_inc=x, r_data=09
+# Time=315, w_full=0, r_empty=1, w_inc=1, w_data=0d, r_inc=x, r_data=09
+# Time=325, w_full=0, r_empty=0, w_inc=0, w_data=0d, r_inc=x, r_data=09
+# Time=345, w_full=0, r_empty=0, w_inc=0, w_data=0d, r_inc=1, r_data=09
+# Time=375, w_full=0, r_empty=0, w_inc=0, w_data=0d, r_inc=0, r_data=63
+# Time=405, w_full=0, r_empty=0, w_inc=0, w_data=0d, r_inc=1, r_data=63
+# Time=425, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=1, r_data=xx
+# Time=435, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=465, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=475, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=495, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=525, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=555, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=1, r_data=xx
+# Time=575, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=1, r_data=xx
+# Time=585, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=615, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=625, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=645, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=675, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=705, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=1, r_data=xx
+# Time=725, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=1, r_data=xx
+# Time=735, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=765, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=775, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=795, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=825, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=855, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=1, r_data=xx
+# Time=875, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=1, r_data=xx
+# Time=885, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=915, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=925, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=945, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=975, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=1005, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=1, r_data=xx
+# Time=1025, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=1, r_data=xx
+# Time=1035, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=1065, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=1075, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=1095, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# Time=1125, w_full=0, r_empty=1, w_inc=0, w_data=0d, r_inc=0, r_data=xx
+# ** Note: $finish    : async_fifo_tb.sv(69)
+#    Time: 1130 ns  Iteration: 0  Instance: /top
+# 1
+# Break in Module top at async_fifo_tb.sv line 69
+# End time: 22:50:36 on Jan 31,2025, Elapsed time: 0:02:34
+# Errors: 0, Warnings: 1
