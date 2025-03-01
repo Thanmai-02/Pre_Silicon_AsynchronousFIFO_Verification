@@ -1,0 +1,976 @@
+$date
+	Wed Feb 26 23:37:20 2025
+$end
+$version
+	QuestaSim Version 2024.2
+$end
+$timescale
+	1ns
+$end
+
+$scope module async_fifo_TB $end
+
+$scope module in $end
+$var parameter 32 ! DATA_SIZE $end
+$var reg 1 " w_clk $end
+$var reg 1 # wrst_n $end
+$var reg 1 $ r_clk $end
+$var reg 1 % rrst_n $end
+$var reg 1 & w_en $end
+$var reg 1 ' r_en $end
+$var reg 8 ( data_in [7:0] $end
+$var reg 8 ) data_out [7:0] $end
+$var reg 1 * full $end
+$var reg 1 + empty $end
+$var reg 1 , write_error $end
+$var reg 1 - read_error $end
+$upscope $end
+
+$scope module as_fifo $end
+$var parameter 32 . DEPTH $end
+$var parameter 32 / DATA_SIZE $end
+$var parameter 32 0 PTR_SIZE $end
+$var wire 1 1 w_clk $end
+$var wire 1 2 wrst_n $end
+$var wire 1 3 r_clk $end
+$var wire 1 4 rrst_n $end
+$var wire 1 5 w_en $end
+$var wire 1 6 r_en $end
+$var wire 1 7 data_in [7] $end
+$var wire 1 8 data_in [6] $end
+$var wire 1 9 data_in [5] $end
+$var wire 1 : data_in [4] $end
+$var wire 1 ; data_in [3] $end
+$var wire 1 < data_in [2] $end
+$var wire 1 = data_in [1] $end
+$var wire 1 > data_in [0] $end
+$var reg 8 ? data_out [7:0] $end
+$var reg 1 @ full $end
+$var reg 1 A empty $end
+$var reg 1 B write_error $end
+$var reg 1 C read_error $end
+$var reg 9 D g_wptr_sync [8:0] $end
+$var reg 9 E g_rptr_sync [8:0] $end
+$var reg 9 F b_wptr [8:0] $end
+$var reg 9 G b_rptr [8:0] $end
+$var reg 9 H g_wptr [8:0] $end
+$var reg 9 I g_rptr [8:0] $end
+$var wire 1 J waddr [7] $end
+$var wire 1 K waddr [6] $end
+$var wire 1 L waddr [5] $end
+$var wire 1 M waddr [4] $end
+$var wire 1 N waddr [3] $end
+$var wire 1 O waddr [2] $end
+$var wire 1 P waddr [1] $end
+$var wire 1 Q waddr [0] $end
+$var wire 1 R raddr [7] $end
+$var wire 1 S raddr [6] $end
+$var wire 1 T raddr [5] $end
+$var wire 1 U raddr [4] $end
+$var wire 1 V raddr [3] $end
+$var wire 1 W raddr [2] $end
+$var wire 1 X raddr [1] $end
+$var wire 1 Y raddr [0] $end
+
+$scope module sync_wptr $end
+$var parameter 32 Z SIZE $end
+$var wire 1 3 clk $end
+$var wire 1 4 rst_n $end
+$var wire 1 [ d_in [8] $end
+$var wire 1 \ d_in [7] $end
+$var wire 1 ] d_in [6] $end
+$var wire 1 ^ d_in [5] $end
+$var wire 1 _ d_in [4] $end
+$var wire 1 ` d_in [3] $end
+$var wire 1 a d_in [2] $end
+$var wire 1 b d_in [1] $end
+$var wire 1 c d_in [0] $end
+$var reg 9 d d_out [8:0] $end
+$var reg 9 e q1 [8:0] $end
+$upscope $end
+
+$scope module sync_rptr $end
+$var parameter 32 f SIZE $end
+$var wire 1 1 clk $end
+$var wire 1 2 rst_n $end
+$var wire 1 g d_in [8] $end
+$var wire 1 h d_in [7] $end
+$var wire 1 i d_in [6] $end
+$var wire 1 j d_in [5] $end
+$var wire 1 k d_in [4] $end
+$var wire 1 l d_in [3] $end
+$var wire 1 m d_in [2] $end
+$var wire 1 n d_in [1] $end
+$var wire 1 o d_in [0] $end
+$var reg 9 p d_out [8:0] $end
+$var reg 9 q q1 [8:0] $end
+$upscope $end
+
+$scope module wptr_h $end
+$var parameter 32 r PTR_SIZE $end
+$var wire 1 1 w_clk $end
+$var wire 1 2 wrst_n $end
+$var wire 1 5 w_en $end
+$var wire 1 s g_rptr_sync [8] $end
+$var wire 1 t g_rptr_sync [7] $end
+$var wire 1 u g_rptr_sync [6] $end
+$var wire 1 v g_rptr_sync [5] $end
+$var wire 1 w g_rptr_sync [4] $end
+$var wire 1 x g_rptr_sync [3] $end
+$var wire 1 y g_rptr_sync [2] $end
+$var wire 1 z g_rptr_sync [1] $end
+$var wire 1 { g_rptr_sync [0] $end
+$var reg 9 | b_wptr [8:0] $end
+$var reg 9 } g_wptr [8:0] $end
+$var reg 1 ~ full $end
+$var reg 9 !! b_wptr_next [8:0] $end
+$var reg 9 "! g_wptr_next [8:0] $end
+$var wire 1 #! wfull $end
+$upscope $end
+
+$scope module rptr_h $end
+$var parameter 32 $! PTR_SIZE $end
+$var wire 1 3 r_clk $end
+$var wire 1 4 rrst_n $end
+$var wire 1 6 r_en $end
+$var wire 1 %! g_wptr_sync [8] $end
+$var wire 1 &! g_wptr_sync [7] $end
+$var wire 1 '! g_wptr_sync [6] $end
+$var wire 1 (! g_wptr_sync [5] $end
+$var wire 1 )! g_wptr_sync [4] $end
+$var wire 1 *! g_wptr_sync [3] $end
+$var wire 1 +! g_wptr_sync [2] $end
+$var wire 1 ,! g_wptr_sync [1] $end
+$var wire 1 -! g_wptr_sync [0] $end
+$var reg 9 .! b_rptr [8:0] $end
+$var reg 9 /! g_rptr [8:0] $end
+$var reg 1 0! empty $end
+$var reg 9 1! b_rptr_next [8:0] $end
+$var reg 9 2! g_rptr_next [8:0] $end
+$var wire 1 3! rempty $end
+$upscope $end
+
+$scope module fifom $end
+$var parameter 32 4! DEPTH $end
+$var parameter 32 5! DATA_SIZE $end
+$var parameter 32 6! PTR_SIZE $end
+$var wire 1 1 w_clk $end
+$var wire 1 5 w_en $end
+$var wire 1 3 r_clk $end
+$var wire 1 6 r_en $end
+$var wire 1 7! b_wptr [8] $end
+$var wire 1 8! b_wptr [7] $end
+$var wire 1 9! b_wptr [6] $end
+$var wire 1 :! b_wptr [5] $end
+$var wire 1 ;! b_wptr [4] $end
+$var wire 1 <! b_wptr [3] $end
+$var wire 1 =! b_wptr [2] $end
+$var wire 1 >! b_wptr [1] $end
+$var wire 1 ?! b_wptr [0] $end
+$var wire 1 @! b_rptr [8] $end
+$var wire 1 A! b_rptr [7] $end
+$var wire 1 B! b_rptr [6] $end
+$var wire 1 C! b_rptr [5] $end
+$var wire 1 D! b_rptr [4] $end
+$var wire 1 E! b_rptr [3] $end
+$var wire 1 F! b_rptr [2] $end
+$var wire 1 G! b_rptr [1] $end
+$var wire 1 H! b_rptr [0] $end
+$var wire 1 7 data_in [7] $end
+$var wire 1 8 data_in [6] $end
+$var wire 1 9 data_in [5] $end
+$var wire 1 : data_in [4] $end
+$var wire 1 ; data_in [3] $end
+$var wire 1 < data_in [2] $end
+$var wire 1 = data_in [1] $end
+$var wire 1 > data_in [0] $end
+$var wire 1 I! full $end
+$var wire 1 J! empty $end
+$var reg 8 K! data_out [7:0] $end
+$var reg 1 L! write_error $end
+$var reg 1 M! read_error $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"
+0#
+0$
+0%
+0&
+0'
+b0 (
+bx )
+0*
+1+
+0,
+x-
+bx ?
+0@
+1A
+0B
+xC
+b0 D
+b0 E
+b0 F
+b0 G
+b0 H
+b0 I
+b0 d
+b0 e
+b0 p
+b0 q
+b0 |
+b0 }
+0~
+b0 !!
+b0 "!
+b0 .!
+b0 /!
+10!
+b0 1!
+b0 2!
+bx K!
+0L!
+xM!
+b1000 !
+b100000000 .
+b1000 /
+b1000 0
+b1000 Z
+b1000 f
+b1000 r
+b1000 $!
+b100000000 4!
+b1000 5!
+b1000 6!
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+11
+1J!
+0I!
+0H!
+0G!
+0F!
+0E!
+0D!
+0C!
+0B!
+0A!
+0@!
+0?!
+0>!
+0=!
+0<!
+0;!
+0:!
+09!
+08!
+07!
+0-!
+0,!
+0+!
+0*!
+0)!
+0(!
+0'!
+0&!
+0%!
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0o
+0n
+0m
+0l
+0k
+0j
+0i
+0h
+0g
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+zQ
+zP
+zO
+zN
+zM
+zL
+zK
+zJ
+zY
+zX
+zW
+zV
+zU
+zT
+zS
+zR
+0#!
+13!
+$end
+#1
+1$
+13
+0M!
+0C
+0-
+#2
+0"
+0$
+01
+03
+#3
+1$
+13
+#4
+1"
+0$
+11
+03
+#5
+1$
+13
+#6
+0"
+0$
+01
+03
+#7
+1$
+13
+#8
+1"
+0$
+11
+03
+1#
+1%
+12
+14
+#9
+1$
+13
+#10
+0"
+0$
+01
+03
+#11
+1$
+13
+#12
+1"
+0$
+11
+03
+1&
+b11110001 (
+1>
+1:
+19
+18
+17
+15
+b1 !!
+b1 "!
+#13
+1$
+13
+#14
+0"
+0$
+01
+03
+#15
+1$
+13
+#16
+1"
+0$
+11
+03
+b10001101 (
+1<
+1;
+0:
+09
+08
+b1 |
+b1 }
+b1 H
+b1 F
+1?!
+1c
+b10 !!
+b11 "!
+#17
+1$
+13
+b1 e
+#18
+0"
+0$
+01
+03
+#19
+1$
+13
+b1 d
+b1 D
+1-!
+03!
+#20
+1"
+0$
+11
+03
+b1110 (
+0>
+1=
+07
+b10 |
+b11 }
+b11 H
+b10 F
+0?!
+1>!
+1b
+b11 !!
+b10 "!
+#21
+1$
+13
+00!
+b11 e
+0A
+0+
+0J!
+#22
+0"
+0$
+01
+03
+#23
+1$
+13
+b11 d
+b11 D
+1,!
+#24
+1"
+0$
+11
+03
+b101110 (
+19
+b11 |
+b10 }
+b10 H
+b11 F
+1?!
+0c
+b100 !!
+b110 "!
+#25
+1$
+13
+b10 e
+#26
+0"
+0$
+01
+03
+#27
+1$
+13
+b10 d
+b10 D
+0-!
+#28
+1"
+0$
+11
+03
+b1001101 (
+1>
+0=
+09
+18
+b100 |
+b110 }
+b110 H
+b100 F
+0?!
+0>!
+1=!
+1a
+b101 !!
+b111 "!
+#29
+1$
+13
+b110 e
+#30
+0"
+0$
+01
+03
+#31
+1$
+13
+b110 d
+b110 D
+1+!
+#32
+1"
+0$
+11
+03
+0&
+b0 (
+0>
+0<
+0;
+08
+05
+b100 !!
+b110 "!
+b101 |
+b111 }
+b111 H
+b101 F
+1?!
+1c
+b101 !!
+b111 "!
+#33
+1$
+13
+b111 e
+#34
+0"
+0$
+01
+03
+#35
+1$
+13
+b111 d
+b111 D
+1-!
+#36
+1"
+0$
+11
+03
+#37
+1$
+13
+#38
+0"
+0$
+01
+03
+#39
+1$
+13
+#40
+1"
+0$
+11
+03
+#41
+1$
+13
+#42
+0"
+0$
+01
+03
+#43
+1$
+13
+#44
+1"
+0$
+11
+03
+#45
+1$
+13
+#46
+0"
+0$
+01
+03
+#47
+1$
+13
+#48
+1"
+0$
+11
+03
+#49
+1$
+13
+#50
+0"
+0$
+01
+03
+#51
+1$
+13
+#52
+1"
+0$
+11
+03
+#53
+1$
+13
+#54
+0"
+0$
+01
+03
+#55
+1$
+13
+#56
+1"
+0$
+11
+03
+#57
+1$
+13
+#58
+0"
+0$
+01
+03
+#59
+1$
+13
+#60
+1"
+0$
+11
+03
+#61
+1$
+13
+#62
+0"
+0$
+01
+03
+#63
+1$
+13
+#64
+1"
+0$
+11
+03
+#65
+1$
+13
+#66
+0"
+0$
+01
+03
+#67
+1$
+13
+#68
+1"
+0$
+11
+03
+#69
+1$
+13
+#70
+0"
+0$
+01
+03
+#71
+1$
+13
+#72
+1"
+0$
+11
+03
+#73
+1$
+13
+#74
+0"
+0$
+01
+03
+#75
+1$
+13
+#76
+1"
+0$
+11
+03
+#77
+1$
+13
+#78
+0"
+0$
+01
+03
+#79
+1$
+13
+#80
+1"
+0$
+11
+03
+#81
+1$
+13
+#82
+0"
+0$
+01
+03
+#83
+1$
+13
+#84
+1"
+0$
+11
+03
+#85
+1$
+13
+#86
+0"
+0$
+01
+03
+#87
+1$
+13
+#88
+1"
+0$
+11
+03
+#89
+1$
+13
+#90
+0"
+0$
+01
+03
+#91
+1$
+13
+#92
+1"
+0$
+11
+03
+#93
+1$
+13
+#94
+0"
+0$
+01
+03
+#95
+1$
+13
+#96
+1"
+0$
+11
+03
+#97
+1$
+13
+#98
+0"
+0$
+01
+03
+#99
+1$
+13
+#100
+1"
+0$
+11
+03
+#101
+1$
+13
+#102
+0"
+0$
+01
+03
+#103
+1$
+13
+#104
+1"
+0$
+11
+03
+#105
+1$
+13
+#106
+0"
+0$
+01
+03
+#107
+1$
+13
+#108
+1"
+0$
+11
+03
+#109
+1$
+13
+#110
+0"
+0$
+01
+03
+#111
+1$
+13
+#112
+1"
+0$
+11
+03
+#113
+1$
+13
+#114
+0"
+0$
+01
+03
+#115
+1$
+13
+#116
+1"
+0$
+11
+03
+#117
+1$
+13
+#118
+0"
+0$
+01
+03
+#119
+1$
+13
+#120
+1"
+0$
+11
+03
+#121
+1$
+13
+#122
+0"
+0$
+01
+03
+#123
+1$
+13
+#124
+1"
+0$
+11
+03
+#125
+1$
+13
+#126
+0"
+0$
+01
+03
+#127
+1$
+13
+#128
+1"
+0$
+11
+03
+#129
+1$
+13
+#130
+0"
+0$
+01
+03
+#131
+1$
+13
+#132
+1"
+0$
+11
+03
