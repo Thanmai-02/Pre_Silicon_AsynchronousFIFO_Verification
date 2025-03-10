@@ -1,0 +1,1 @@
+C:/questasim64_2024.2/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 1524000 -reportprogress 300 async_fifo_TB -o async_fifo_TB_opt +acc +cover=sbfec +__design_bin_path+//thoth.cecs.pdx.edu/Home06/bhanusai/Desktop/fifo +__betafsm

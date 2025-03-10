@@ -1,0 +1,66 @@
+# //  Questa Sim-64
+# //  Version 2024.2 linux_x86_64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+do run.do
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:25:39 on Mar 04,2025
+# vlog -reportprogress 300 -source -lint -sv "+incdir+../src/rtl" ../src/tb/testbench.sv 
+# ** Note: (vlog-2286) ../src/tb/testbench.sv(2): Using implicit +incdir+/pkgs/mentor/questa/2024.2/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package testbench_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module fifo_mem
+# -- Compiling module rptr_handler
+# -- Compiling module synchronizer
+# -- Compiling module wptr_handler
+# -- Compiling module asynchronous_fifo
+# -- Compiling interface interface_fifo
+# -- Compiling module async_fifo_TB
+# 
+# Top level modules:
+# 	async_fifo_TB
+# End time: 22:25:40 on Mar 04,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# Start time: 22:25:40 on Mar 04,2025
+# vopt -reportprogress 300 async_fifo_TB -o async_fifo_TB_Opt "+acc" "+cover=sbfec" 
+# 
+# Top level modules:
+# 	async_fifo_TB
+# 
+# Analyzing design...
+# -- Loading module async_fifo_TB
+# -- Loading package mtiUvm.questa_uvm_pkg
+# -- Loading interface interface_fifo
+# -- Loading module asynchronous_fifo
+# -- Loading module synchronizer
+# -- Loading module wptr_handler
+# -- Loading module rptr_handler
+# -- Loading module fifo_mem
+# ** Warning: (vopt-13408) Code coverage will be disabled for some DUs/packages/classes and source files.
+# Optimizing 11 design-units (inlining 0/8 module instances):
+# -- Optimizing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)(fast)
+# -- Optimizing package mtiUvm.questa_uvm_pkg(fast)
+# -- Optimizing package testbench_sv_unit(fast)
+# -- Optimizing interface interface_fifo(fast__2)
+# -- Optimizing module fifo_mem(fast)
+# -- Optimizing module asynchronous_fifo(fast)
+# -- Optimizing module wptr_handler(fast)
+# -- Optimizing module async_fifo_TB(fast)
+# -- Optimizing module rptr_handler(fast)
+# -- Optimizing module synchronizer(fast)
+# -- Optimizing interface interface_fifo(fast)
+# Optimized design name is async_fifo_TB_Opt
+# End time: 22:25:43 on Mar 04,2025, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 2

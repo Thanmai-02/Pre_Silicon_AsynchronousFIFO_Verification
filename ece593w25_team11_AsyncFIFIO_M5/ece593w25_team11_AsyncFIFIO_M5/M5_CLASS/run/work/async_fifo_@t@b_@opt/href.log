@@ -1,0 +1,17 @@
+BEGIN 3:interface_fifo:fast__1:work
+    r_clk :  1:testbench_sv_unit:fast:work
+END 
+BEGIN 3:interface_fifo:fast__2:work
+    data_out :  1:async_fifo_TB:fast:work
+    w_clk :  1:async_fifo_TB:fast:work
+    empty :  1:async_fifo_TB:fast:work
+    r_clk :  1:async_fifo_TB:fast:work
+    read_error :  1:async_fifo_TB:fast:work
+    w_en :  1:async_fifo_TB:fast:work
+    data_in :  1:async_fifo_TB:fast:work
+    full :  1:async_fifo_TB:fast:work
+    wrst_n :  1:async_fifo_TB:fast:work
+    write_error :  1:async_fifo_TB:fast:work
+    rrst_n :  1:async_fifo_TB:fast:work
+    r_en :  1:async_fifo_TB:fast:work
+END 

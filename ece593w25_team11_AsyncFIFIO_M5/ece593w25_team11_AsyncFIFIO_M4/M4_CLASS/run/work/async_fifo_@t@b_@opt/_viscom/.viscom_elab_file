@@ -1,0 +1,1 @@
+/pkgs/mentor/questa/2024.2/questasim/linux_x86_64/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 87638304 -reportprogress 300 async_fifo_TB -o async_fifo_TB_Opt +acc +cover=sbfec +__design_bin_path+/u/bestha/M4/run +__betafsm

@@ -1,0 +1,46 @@
+# Current time Tue Mar  4 22:33:42 2025
+# Program = vsim
+# Id = "2024.2"
+# Version = "2024.05"
+# Date = "May 20 2024"
+# Platform = "linux_x86_64"
+# Signature = 95a2763bd9298e9e0dd93dcbb92d9071
+# 0    0x00000000037ed7cb: '<unknown (@0x37ed7cb)>'
+# 1    0x0000000000bf620c: '<unknown (@0xbf620c)>'
+# 2    0x00000000007dd047: '<unknown (@0x7dd047)>'
+# 3    0x00007fefe4e8b190: '/pkgs/mentor/questa/2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_port_base.svh:211'
+# 4    0x00000000007efa1b: '<unknown (@0x7efa1b)>'
+# 5    0x00007fefe4df742f: '/pkgs/mentor/questa/2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/tlm1/uvm_analysis_port.svh:57'
+# 6    0x00000000007efa1b: '<unknown (@0x7efa1b)>'
+# 7    0x00007fefe4def5f8: '/pkgs/mentor/questa/2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_fifo_base.svh:99'
+# 8    0x00000000007efa1b: '<unknown (@0x7efa1b)>'
+# 9    0x00007fefe4dea5d0: '/pkgs/mentor/questa/2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/tlm1/uvm_tlm_fifos.svh:46'
+# 10   0x00000000007efa1b: '<unknown (@0x7efa1b)>'
+# 11   0x00007fefe4da64c5: '/pkgs/mentor/questa/2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/seq/uvm_sequencer_analysis_fifo.svh:23'
+# 12   0x00000000007efa1b: '<unknown (@0x7efa1b)>'
+# 13   0x00007fefe4da151c: '/pkgs/mentor/questa/2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/seq/uvm_sequencer_param_base.svh:46'
+# 14   0x00000000007efa1b: '<unknown (@0x7efa1b)>'
+# 15   0x00007fefe4d9a6ca: '/pkgs/mentor/questa/2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/seq/uvm_sequencer.svh:30'
+# 16   0x00000000007efa1b: '<unknown (@0x7efa1b)>'
+# 17   0x00007fefe4b6b004: '/pkgs/mentor/questa/2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/seq/uvm_sequencer.svh:106'
+# 18   0x00000000007f2ab8: '<unknown (@0x7f2ab8)>'
+# 19   0x00000000009d97e9: '<unknown (@0x9d97e9)>'
+# 20   0x00000000009da2be: '<unknown (@0x9da2be)>'
+# 21   0x0000000000ad0a98: '<unknown (@0xad0a98)>'
+# 22   0x0000000000ad5969: '<unknown (@0xad5969)>'
+# 23   0x0000000001026bc9: '<unknown (@0x1026bc9)>'
+# 24   0x000000000102097d: '<unknown (@0x102097d)>'
+# 25   0x00000000038f95ed: '<unknown (@0x38f95ed)>'
+# 26   0x00000000038fda46: '<unknown (@0x38fda46)>'
+# 27   0x00000000038ff131: '<unknown (@0x38ff131)>'
+# 28   0x00000000038ff496: '<unknown (@0x38ff496)>'
+# 29   0x00000000012cb119: '<unknown (@0x12cb119)>'
+# 30   0x000000000399f39f: '<unknown (@0x399f39f)>'
+# 31   0x00000000039f2f17: '<unknown (@0x39f2f17)>'
+# 32   0x00000000039b5e07: '<unknown (@0x39b5e07)>'
+# 33   0x00000000039b60e9: '<unknown (@0x39b60e9)>'
+# 34   0x000000000375551d: '<unknown (@0x375551d)>'
+# 35   0x0000000000cd7e74: '<unknown (@0xcd7e74)>'
+# End of Stack Trace
+
+
